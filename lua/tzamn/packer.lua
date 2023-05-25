@@ -23,6 +23,27 @@ return require('packer').startup(function(use) -- Packer can manage itself
     {run = ':TSUpdate'}
     )
 
+    use (
+    'neomake/neomake'
+    )
+
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
+
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+        config = function()
+            require("nvim-tree").setup {}
+        end
+    }
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -35,6 +56,7 @@ return require('packer').startup(function(use) -- Packer can manage itself
                 pcall(vim.cmd, 'MasonUpdate')
             end,
         },
+
         {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
         -- Autocompletion
@@ -42,28 +64,8 @@ return require('packer').startup(function(use) -- Packer can manage itself
         {'hrsh7th/cmp-nvim-lsp'}, -- Required
         {'L3MON4D3/LuaSnip'},     -- Required
     }
-}
+    }
 
-use (
-'neomake/neomake'
-)
-
-use {
-    'numToStr/Comment.nvim',
-    config = function()
-        require('Comment').setup()
-    end
-}
-
-use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-        'nvim-tree/nvim-web-devicons', -- optional
-    },
-    config = function()
-        require("nvim-tree").setup {}
-    end
-}
 
 end)
 

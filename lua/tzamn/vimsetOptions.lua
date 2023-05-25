@@ -3,7 +3,7 @@
 --
 -- Description:
 -- 	General configuration for neovim, 
--- 	all the set options in vim are now called by vim.opt insted of set 
+-- 	all the set options in vim are now called by vim.opt instead of set 
 --
 
 -- Set number
@@ -13,7 +13,7 @@ vim.opt.number		= true
 vim.opt.relativenumber	= true
 
 -- Set mouse active
-vim.opt.mouse		= active 
+vim.opt.mouse		= "nvi" 
 
 -- Indent a new line the same amount as the line just typed
 vim.opt.autoindent	= true
@@ -32,7 +32,12 @@ vim.opt.shiftwidth	= 4
 
 -- Set vim colorscheme
 vim.cmd('colorscheme default') 
---
+
+vim.opt.spell   = false
+
+vim.opt.spelllang   = "en_us,es_mx"
+
+-- helo
 -- syntax on                   " syntax highlighting
 -- set clipboard=unnamedplus   " using system clipboard
 -- 
@@ -40,8 +45,6 @@ vim.cmd('colorscheme default')
 -- 
 -- 
 -- 
--- " set spell                 " enable spell check (may need to download language package)
--- " set noswapfile            " disable creating swap file
 -- " set backupdir=~/.cache/vim " Directory to store backup files.
 -- 
 -- 
@@ -54,4 +57,4 @@ vim.cmd('colorscheme default')
 -- 
 -- nnoremap <C-t> :NERDTreeFocus<CR>
 -- nnoremap <C-t> :NERDTreeToggle<CR>
--- 
+
