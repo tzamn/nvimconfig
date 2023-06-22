@@ -13,7 +13,7 @@ vim.opt.number		= true
 vim.opt.relativenumber	= true
 
 -- Set mouse active
-vim.opt.mouse		= "nvi" 
+vim.opt.mouse		= "nvi"
 
 -- Indent a new line the same amount as the line just typed
 vim.opt.autoindent	= true
@@ -30,31 +30,17 @@ vim.opt.expandtab	= true
 -- Width for autoindents
 vim.opt.shiftwidth	= 4           
 
--- Set vim colorscheme
-vim.cmd('colorscheme default') 
+-- Set vim colorscheme kanagawa-wave, kanagawa-dragon, kanagawa-lotus
+vim.cmd('colorscheme kanagawa-wave')
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+vim.opt.termguicolors   = true
 
 vim.opt.spell   = false
 
-vim.opt.spelllang   = "en_us,es_mx"
+vim.opt.colorcolumn = "80" 
 
--- helo
--- syntax on                   " syntax highlighting
--- set clipboard=unnamedplus   " using system clipboard
--- 
--- au BufRead,BufNewFile *.cmm set filetype=practice
--- 
--- 
--- 
--- " set backupdir=~/.cache/vim " Directory to store backup files.
--- 
--- 
--- 
--- call plug#begin() 
---     Plug 'https://github.com/preservim/nerdtree'
---     Plug 'neomake/neomake'
--- 
--- call plug#end()
--- 
--- nnoremap <C-t> :NERDTreeFocus<CR>
--- nnoremap <C-t> :NERDTreeToggle<CR>
+vim.opt.textwidth = 80
+
+vim.opt.spelllang   = "en_us,es_mx"
 

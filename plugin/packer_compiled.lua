@@ -90,6 +90,11 @@ _G.packer_plugins = {
     path = "/home/tzamn/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "/home/tzamn/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/tzamn/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",

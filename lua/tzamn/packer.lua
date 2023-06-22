@@ -27,6 +27,10 @@ return require('packer').startup(function(use) -- Packer can manage itself
     'neomake/neomake'
     )
 
+    use (
+    'rebelot/kanagawa.nvim'
+    )
+
     use {
         'numToStr/Comment.nvim',
         config = function()
