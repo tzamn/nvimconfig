@@ -8,38 +8,37 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use) -- Packer can manage itself
-    use {
-        'wbthomason/packer.nvim'
-    }
 
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    use {'wbthomason/packer.nvim'}
+
+    use {'nvim-telescope/telescope.nvim',
+        tag = '0.1.1',
         -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = {
+            {'nvim-lua/plenary.nvim'}
+        }
     }
 
-    use (
-    'nvim-treesitter/nvim-treesitter',
-    {run = ':TSUpdate'}
+    use ('nvim-treesitter/nvim-treesitter',
+        {run = ':TSUpdate'}
     )
 
-    use (
-    'neomake/neomake'
-    )
+    use ('nvim-treesitter/playground')
+    use ('nvim-treesitter/nvim-treesitter-context')
 
-    use (
-    'rebelot/kanagawa.nvim'
-    )
 
-    use {
-        'numToStr/Comment.nvim',
+    use ('mbbill/undotree')
+    use ('neomake/neomake')
+
+    use ('rebelot/kanagawa.nvim')
+
+    use {'numToStr/Comment.nvim',
         config = function()
             require('Comment').setup()
         end
     }
 
-    use {
-        'nvim-tree/nvim-tree.lua',
+    use {'nvim-tree/nvim-tree.lua',
         requires = {
             'nvim-tree/nvim-web-devicons', -- optional
         },
@@ -48,8 +47,7 @@ return require('packer').startup(function(use) -- Packer can manage itself
         end
     }
 
-    use {
-        'VonHeikemen/lsp-zero.nvim',
+    use {'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
         requires = {
             -- LSP Support
