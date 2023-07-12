@@ -6,11 +6,12 @@ end)
 
 lsp.setup()
 
--- Make sure you setup `cmp` after lsp-zero
+local snip          = require("luasnip.loaders.from_vscode")
+snip.lazy_load()
 
+-- Make sure you setup `cmp` after lsp-zero
 local cmp           = require('cmp')
 local cmp_action    = require('lsp-zero').cmp_action()
-
 cmp.setup({
     preselect = 'item',
     completion = {
