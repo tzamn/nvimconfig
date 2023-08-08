@@ -1,11 +1,10 @@
--- Author:
---      Tzamn Melendez
+---@module keyremap
+---@author Tzamn Melendez Carmona
+---@license 
+-- All the vim remaps are in this file, however the plugins remaps are in their
+-- respective .lua file in after/plugin folder
 --
--- Description:
---      Shortcut configuration
-
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>ft", vim.cmd.NvimTreeToggle)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")

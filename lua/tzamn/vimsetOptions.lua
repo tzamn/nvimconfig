@@ -28,7 +28,7 @@ vim.opt.softtabstop	= 4
 vim.opt.expandtab	= true
 
 -- Width for autoindents
-vim.opt.shiftwidth	= 4           
+vim.opt.shiftwidth	= 4
 
 -- Set vim colorscheme kanagawa-wave, kanagawa-dragon, kanagawa-lotus
 vim.cmd('colorscheme kanagawa-wave')
@@ -38,7 +38,7 @@ vim.opt.termguicolors   = true
 
 vim.opt.spell   = false
 
-vim.opt.colorcolumn = "80" 
+vim.opt.colorcolumn = "80"
 
 vim.opt.textwidth = 80
 

@@ -9,6 +9,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use) -- Packer can manage itself
 
+    -- plugin manager 
     use {'wbthomason/packer.nvim'}
 
     use {'nvim-telescope/telescope.nvim',
@@ -26,25 +27,23 @@ return require('packer').startup(function(use) -- Packer can manage itself
     use ('nvim-treesitter/playground')
     use ('nvim-treesitter/nvim-treesitter-context')
 
+    -- it does require nvim-treesitter snippets for doxygen
+    use ("danymat/neogen")
+
+    use ("lukas-reineke/indent-blankline.nvim")
 
     use ('mbbill/undotree')
     use ('neomake/neomake')
 
+    -- colorscheme 
     use ('rebelot/kanagawa.nvim')
 
-    use {'numToStr/Comment.nvim',
-        config = function()
-            require('Comment').setup()
-        end
-    }
+    use {'numToStr/Comment.nvim'}
 
     use {'nvim-tree/nvim-tree.lua',
         requires = {
             'nvim-tree/nvim-web-devicons', -- optional
         },
-        config = function()
-            require("nvim-tree").setup {}
-        end
     }
 
     use {
