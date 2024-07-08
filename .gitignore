@@ -1,0 +1,5 @@
+# ignore lazy-lock
+lazy-lock.json
+# ignore after.bak
+after.bak/
+

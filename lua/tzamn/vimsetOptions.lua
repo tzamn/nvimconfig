@@ -1,46 +1,51 @@
--- Author: 
+-- Author:
 -- 	Tzamn Melendez
 --
 -- Description:
--- 	General configuration for neovim, 
--- 	all the set options in vim are now called by vim.opt instead of set 
+-- 	General configuration for neovim,
+-- 	all the set options in vim are now called by set instead of set
 --
+-- call the lua api for vim option and commands
+local set          = vim.opt
+local cmd          = vim.cmd
 
 -- Set number
-vim.opt.number		= true
+set.number         = true
 
 -- Set relative numbers
-vim.opt.relativenumber	= true
+set.relativenumber = true
+
+-- highlight the cursor line
+set.cursorline     = true
 
 -- Set mouse active
-vim.opt.mouse		= "nvi"
+set.mouse          = "nvi"
 
 -- Indent a new line the same amount as the line just typed
-vim.opt.autoindent	= true
+set.autoindent     = true
+
+-- When on, lines longer than the width of the window will wrap and displaying continues on the next line.  When off lines will not wrap and only part of long lines will be displayed.set.wrap = false
+
+set.breakindent    = true
 
 -- Number of columns occupied by a tab
-vim.opt.tabstop		= 4
+set.tabstop        = 4
 
 -- See multiple spaces as tabstops so <BS> does the right thing
-vim.opt.softtabstop	= 4
+set.softtabstop    = 4
 
 -- Converts tabs to white space
-vim.opt.expandtab	= true
+set.expandtab      = true
 
 -- Width for autoindents
-vim.opt.shiftwidth	= 4
+set.shiftwidth     = 4
 
--- Set vim colorscheme kanagawa-wave, kanagawa-dragon, kanagawa-lotus
-vim.cmd('colorscheme kanagawa-wave')
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-vim.opt.termguicolors   = true
+-- set column to 100 by default
+set.colorcolumn    = "100"
 
-vim.opt.spell   = false
+set.textwidth      = 100
 
-vim.opt.colorcolumn = "80"
+set.termguicolors  = true
 
-vim.opt.textwidth = 80
-
-vim.opt.spelllang   = "en_us,es_mx"
-
+-- Dont let add more than 8 lines at the end of the file
+set.scrolloff      = 8

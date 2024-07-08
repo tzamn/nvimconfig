@@ -1,3 +1,3 @@
-print("Tzamn's Neovim")
+print("Tzamn Neovim config 2024")
 require("tzamn")
 
