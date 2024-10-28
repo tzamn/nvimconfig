@@ -30,4 +30,10 @@ local kanagawa = {
     end
 }
 
-return { bluloco, oxocarbon, kanagawa }
+local tokyonight = {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+}
+return { bluloco, oxocarbon, kanagawa, tokyonight }
