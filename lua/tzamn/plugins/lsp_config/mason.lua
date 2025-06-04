@@ -10,7 +10,6 @@ local lsp_cmp = require("cmp_nvim_lsp")
 mason.setup({})
 
 mason_lspconf.setup({
-    automatic_enable = false,
     ensure_installed = {
         "lua_ls",
         "clangd",
